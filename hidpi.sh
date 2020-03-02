@@ -68,11 +68,11 @@ if [[ "${systemLanguage}" == "zh_CN" ]]; then
     langChooseResOpCustom="(6) 手动输入分辨率"
 fi
 
-downloadHost="https://raw.githubusercontent.com/xzhih/one-key-hidpi/master"
+downloadHost="https://raw.githubusercontent.com/funchs/one-key-hidpi/master"
 # downloadHost="https://raw.githubusercontent.com/xzhih/one-key-hidpi/dev"
 # downloadHost="http://127.0.0.1:8080"
 
-if [[ "${sipInfo}" == *"Filesystem Protections: disabled"* ]] || [[ "$(awk '{print $5}' <<< "${sipInfo}")" == "disabled." ]]; then
+if [[ "${sipInfo}" == *"System Integrity Protection status: disabled"* ]] || [[ "$(awk '{print $5}' <<< "${sipInfo}")" == "disabled." ]]; then
     :
 else
     echo "${disableSIP}";
